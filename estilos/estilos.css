@@ -41,73 +41,72 @@ h2 {
     letter-spacing: 1px;
 }
 
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: #fff;
+    padding: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .proyectos {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 32px;
     justify-content: center;
     margin-bottom: 40px;
 }
 
-.link-proyecto {
+.tarjeta-proyecto {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 28px 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 32px 26px;
     text-decoration: none;
     color: #222;
-    width: 270px;
+    width: 300px;
+    min-height: 180px;
     transition: transform 0.18s, box-shadow 0.18s;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: 2px solid transparent;
 }
 
-.link-proyecto:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(0,91,234,0.13);
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,91,234,0.15);
     color: #005bea;
+    border: 2px solid #3ec6e0;
 }
 
-.link-proyecto h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
+.tarjeta-proyecto h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.35rem;
     color: #005bea;
+    font-weight: 600;
 }
 
-.link-proyecto p {
+.tarjeta-proyecto p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #444;
 }
 
-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-section ul li {
-    margin-bottom: 10px;
-    font-size: 1.08rem;
-}
-
-section ul li a {
-    color: #005bea;
-    text-decoration: none;
-    transition: text-decoration 0.2s;
-}
-
-section ul li a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .proyectos {
         flex-direction: column;
         align-items: center;
     }
-    main {
-        padding: 0 8px;
+    .tarjeta-proyecto {
+        width: 95%;
+        min-width: unset;
     }
 }
